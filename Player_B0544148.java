@@ -19,6 +19,7 @@ public class Player_B0544148 extends Player {
 		}if(mybet_prev > get_current_chips()){
 			mybet_made = mybet_made * 2;
 		}
+		mybet_prev = get_current_chips();
 		return mybet_made;
 	}
 
