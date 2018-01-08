@@ -1,7 +1,7 @@
 
 public class Player_B0544148 extends Player {
 	
-	private int mybet_prev = 1000;//¥ı«eªºbet
+	private int mybet_prev = 1000;//å…ˆå‰çš„bet
 	private int mybet_made = 10;
 	private int DealerUpCard = 0;
 	
@@ -13,10 +13,10 @@ public class Player_B0544148 extends Player {
 	
 
 	@Override
-	public int make_bet() { //°¨¤B®æº¸(³Ó§Q­«ªğ¡A¥¢±Ñ¦V«e)
-		if(mybet_prev > get_current_chips()){
+	public int make_bet() { //é¦¬ä¸æ ¼çˆ¾(å‹åˆ©é‡è¿”ï¼Œå¤±æ•—å‘å‰)
+		if(mybet_prev < get_current_chips()){
 			mybet_made = 10;
-		}if(mybet_prev < get_current_chips()){
+		}if(mybet_prev > get_current_chips()){
 			mybet_made = mybet_made * 2;
 		}
 		return mybet_made;
